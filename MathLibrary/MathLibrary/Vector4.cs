@@ -77,5 +77,18 @@ namespace MathClasses
                 w /= magnitude;
             }
         }
+        public float Dot(Vector4 rhs)
+        {
+            return (x * rhs.x) + (y * rhs.y) + (z * rhs.z) + (w * rhs.w);
+        }
+        public Vector4 Cross(Vector4 rhs)
+        {
+            Vector4 results;
+            results.x = (y * rhs.y) - (z * rhs.z);
+            results.y = (x * rhs.x) - (z * rhs.z);
+            results.z = (x * rhs.x) - (y * rhs.y);
+            results.w = 0;
+            return results;
+        }
     }
 }
