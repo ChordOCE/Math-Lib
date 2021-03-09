@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace MathLibrary
 {
@@ -16,7 +16,7 @@ namespace MathLibrary
             this.z = z;
             this.w = w;
         }
-        // V + V
+
         public static Vector4 operator+(Vector4 lhs, Vector4 rhs)
         {
             Vector4 result;
@@ -27,7 +27,7 @@ namespace MathLibrary
 
             return result;
         }
-        // V - V
+
         public static Vector4 operator-(Vector4 lhs, Vector4 rhs)
         {
             Vector4 result;
@@ -38,7 +38,7 @@ namespace MathLibrary
 
             return result;
         }
-        // V * F
+
         public static Vector4 operator*(Vector4 lhs, float rhs)
         {
             Vector4 result;
@@ -49,7 +49,7 @@ namespace MathLibrary
 
             return result;
         }
-        // F * V
+
         public static Vector4 operator*(float lhs, Vector4 rhs)
         {
             Vector4 result;
@@ -59,6 +59,10 @@ namespace MathLibrary
             result.w = lhs * rhs.w;
 
             return result;
+        }
+        public float Magnitude()
+        {
+            return (float)Math.Sqrt((x * x) + (y * y) + (z * z) + (w * w));
         }
     }
 }
