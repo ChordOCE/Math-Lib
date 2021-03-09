@@ -58,5 +58,16 @@ namespace MathLibrary
         {
             return (float)Math.Sqrt((x * x) + (y * y) + (z * z));
         }
+
+        public void Normalise()
+        {
+            float magnitude = Magnitude();
+            if (magnitude != 0)
+            {
+                x /= magnitude;
+                y /= magnitude;
+                z /= magnitude;
+            }
+        }
     }
 }

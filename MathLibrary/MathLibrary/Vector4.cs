@@ -9,7 +9,7 @@ namespace MathLibrary
         public float z;
         public float w;
 
-    
+
         public Vector4(float x = 0.0f, float y = 0.0f, float z = 0.0f, float w = 0.0f)
         {
             this.x = x;
@@ -18,7 +18,7 @@ namespace MathLibrary
             this.w = w;
         }
         //V + V
-        public static Vector4 operator+(Vector4 lhs, Vector4 rhs)
+        public static Vector4 operator +(Vector4 lhs, Vector4 rhs)
         {
             Vector4 result;
             result.x = lhs.x + rhs.x;
@@ -29,7 +29,7 @@ namespace MathLibrary
             return result;
         }
         //V - V
-        public static Vector4 operator-(Vector4 lhs, Vector4 rhs)
+        public static Vector4 operator -(Vector4 lhs, Vector4 rhs)
         {
             Vector4 result;
             result.x = lhs.x - rhs.x;
@@ -40,7 +40,7 @@ namespace MathLibrary
             return result;
         }
         //V * F
-        public static Vector4 operator*(Vector4 lhs, float rhs)
+        public static Vector4 operator *(Vector4 lhs, float rhs)
         {
             Vector4 result;
             result.x = lhs.x * rhs;
@@ -51,7 +51,7 @@ namespace MathLibrary
             return result;
         }
         // F * V
-        public static Vector4 operator*(float lhs, Vector4 rhs)
+        public static Vector4 operator *(float lhs, Vector4 rhs)
         {
             Vector4 result;
             result.x = lhs * rhs.x;
@@ -65,6 +65,17 @@ namespace MathLibrary
         public float Magnitude()
         {
             return (float)Math.Sqrt((x * x) + (y * y) + (z * z) + (w * w));
+        }
+        public void Normalise()
+        {
+            float magnitude = Magnitude();
+            if (magnitude != 0)
+            {
+                x /= magnitude;
+                y /= magnitude;
+                z /= magnitude;
+                w /= magnitude;
+            }
         }
     }
 }
