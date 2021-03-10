@@ -84,9 +84,9 @@ namespace MathClasses
         public Vector4 Cross(Vector4 rhs)
         {
             Vector4 results;
-            results.x = (y * rhs.y) - (z * rhs.z);
-            results.y = (x * rhs.x) - (z * rhs.z);
-            results.z = (x * rhs.x) - (y * rhs.y);
+            results.x = (y * rhs.z) - (z * rhs.y);
+            results.y = (x * rhs.z) - (z * rhs.x);
+            results.z = (x * rhs.y) - (y * rhs.x);
             results.w = 0;
             return results;
         }

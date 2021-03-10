@@ -62,5 +62,34 @@ namespace MathClasses
                 y /= magnitude;
             }
         }
+        public float Dot(Vector2 rhs)
+        {
+            return (x * rhs.x) + (y * rhs.y);
+        }
+        public Vector2 GetRightAngle()
+        {
+            Vector2 result;
+            result.x = -y;
+            result.y = x;
+            return result;
+        }
+        public static float GetAngleBetween(Vector2 lhs, Vector2 rhs)
+        {
+            lhs.Normalise();
+            rhs.Normalise();
+            float fDot = lhs.Dot(rhs);
+
+
+            float angle = (float)Math.Acos(fDot);
+
+            Vector2 rightangle = lhs.GetRightAngle();
+            float fRightDot = rhs.Dot(rightangle);
+            if (fRightDot < 0)
+            {
+                angle = angle * -1.0f;
+            }
+
+            return angle;
+        }
     }
 }
