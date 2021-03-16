@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MathClasses
 {
-    class Colour
+    public class Colour
     {
-        private uint colour = 0;
+        public uint colour = 0;
 
         public Colour(byte red, byte green, byte blue, byte alpha)
         {
