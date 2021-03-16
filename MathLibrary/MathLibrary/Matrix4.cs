@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MathClasses
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     namespace MathClasses
     {
-        struct Matrix4
+        public struct Matrix4
         {
             public float[] m;
 
@@ -93,5 +88,3 @@ namespace MathClasses
 
         }
     }
-
-}

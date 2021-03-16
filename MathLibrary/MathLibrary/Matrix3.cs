@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MathClasses
 {
-    struct Matrix3
+    public struct Matrix3
     {
         public float this[int i]
         {
