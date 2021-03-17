@@ -82,9 +82,31 @@ using System.Text;
                                     a.m[0] * b.m[12] + a.m[4] * b.m[13] * a.m[8]  * b.m[14] + a.m[12] * b.m[15],
                                     a.m[1] * b.m[12] + a.m[5] * b.m[13] * a.m[9]  * b.m[14] + a.m[13] * b.m[15],
                                     a.m[2] * b.m[12] + a.m[6] * b.m[13] * a.m[10] * b.m[14] + a.m[14] * b.m[15],
-                                    a.m[3] * b.m[12] + a.m[7] * b.m[13] * a.m[11] * b.m[14] + a.m[15] * b.m[15]
-                    );
+                                    a.m[3] * b.m[12] + a.m[7] * b.m[13] * a.m[11] * b.m[14] + a.m[15] * b.m[15]);
             }
 
+            public void SetRotateX(float fRadians)
+            {
+                m[4] = (float)Math.Cos(fRadians);
+                m[5] = (float)-Math.Sin(fRadians);
+                m[7] = (float)Math.Sin(fRadians);
+                m[8] = (float)Math.Cos(fRadians);
+            }
+
+            public void SetRotateY(float fRadians)
+            {
+                m[0] = (float)Math.Cos(fRadians);
+                m[2] = (float)Math.Sin(fRadians);
+                m[6] = (float)-Math.Sin(fRadians);
+                m[8] = (float)Math.Cos(fRadians);
+            }
+
+            public void SetRotateZ(float fRadians)
+            {
+                m[0] = (float)Math.Cos(fRadians);
+                m[1] = (float)-Math.Sin(fRadians);
+                m[3] = (float)Math.Sin(fRadians);
+                m[4] = (float)Math.Cos(fRadians);
+            }
         }
     }

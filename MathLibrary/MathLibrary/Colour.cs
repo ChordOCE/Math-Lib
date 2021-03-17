@@ -36,9 +36,9 @@ namespace MathClasses
             colour |= colour | (uint)(alpha << 0);
         }
 
-        public byte GetRed(byte red)
+        public byte GetRed()
         {
-            return (byte)(red >> 24);
+            return (byte)((colour >> 24));
         }
 
         public byte GetGreen()
