@@ -53,7 +53,7 @@ namespace MathClasses
             return (float)Math.Sqrt((x * x) + (y * y));
         }
 
-        public void Normalise()
+        public void Normalize()
         {
             float magnitude = Magnitude();
             if (magnitude != 0)
@@ -75,8 +75,8 @@ namespace MathClasses
         }
         public static float GetAngleBetween(Vector2 lhs, Vector2 rhs)
         {
-            lhs.Normalise();
-            rhs.Normalise();
+            lhs.Normalize();
+            rhs.Normalize();
             float fDot = lhs.Dot(rhs);
 
 

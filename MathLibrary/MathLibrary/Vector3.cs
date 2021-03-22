@@ -15,7 +15,7 @@ namespace MathClasses
             this.z = z;
         }
 
-        public static Vector3 operator+(Vector3 lhs, Vector3 rhs)
+        public static Vector3 operator +(Vector3 lhs, Vector3 rhs)
         {
             Vector3 result;
             result.x = lhs.x + rhs.x;
@@ -25,7 +25,7 @@ namespace MathClasses
             return result;
         }
 
-        public static Vector3 operator-(Vector3 lhs, Vector3 rhs)
+        public static Vector3 operator -(Vector3 lhs, Vector3 rhs)
         {
             Vector3 result;
             result.x = lhs.x - rhs.x;
@@ -35,7 +35,7 @@ namespace MathClasses
             return result;
         }
 
-        public static Vector3 operator*(Vector3 lhs, float rhs)
+        public static Vector3 operator *(Vector3 lhs, float rhs)
         {
             Vector3 result;
             result.x = lhs.x * rhs;
@@ -45,7 +45,7 @@ namespace MathClasses
             return result;
         }
 
-        public static Vector3 operator*(float lhs, Vector3 rhs)
+        public static Vector3 operator *(float lhs, Vector3 rhs)
         {
             Vector3 result;
             result.x = lhs * rhs.x;
@@ -59,7 +59,7 @@ namespace MathClasses
             return (float)Math.Sqrt((x * x) + (y * y) + (z * z));
         }
 
-        public void Normalise()
+        public void Normalize()
         {
             float magnitude = Magnitude();
             if (magnitude != 0)

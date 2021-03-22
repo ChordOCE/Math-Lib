@@ -1,3 +1,4 @@
+
 using System;
 
 namespace MathClasses
@@ -66,7 +67,7 @@ namespace MathClasses
         {
             return (float)Math.Sqrt((x * x) + (y * y) + (z * z) + (w * w));
         }
-        public void Normalise()
+        public void Normalize()
         {
             float magnitude = Magnitude();
             if (magnitude != 0)

@@ -47,7 +47,7 @@ namespace MathClasses
             m[7] = m7;
             m[8] = m8;
         }
-        public static Vector3 operator*(Matrix3 a, Vector3 b)
+        public static Vector3 operator *(Matrix3 a, Vector3 b)
         {
             Vector3 result;
             result.x = (a.m[0] * b.x) + (a.m[3] * b.y) + (a.m[6] * b.z);
@@ -57,14 +57,14 @@ namespace MathClasses
             return result;
         }
 
-        public static Matrix3 operator*(Matrix3 a, Matrix3 b)
+        public static Matrix3 operator *(Matrix3 a, Matrix3 b)
         {
-            Matrix3 bruh = new Matrix3();
-            bruh[0] = a.m[0] * b.m[0] + a.m[3] * b.m[1] + a.m[6] * b.m[2];     bruh[3] = a.m[0] * b.m[3] + a.m[3] * b.m[4] + a.m[6] * b.m[5];     bruh[6] = a.m[0] * b.m[6] + a.m[3] * b.m[7] + a.m[6] * b.m[8];
-            bruh[1] = a.m[1] * b.m[0] + a.m[4] * b.m[1] + a.m[7] * b.m[2];     bruh[4] = a.m[1] * b.m[3] + a.m[4] * b.m[4] + a.m[7] * b.m[5];     bruh[7] = a.m[1] * b.m[6] + a.m[4] * b.m[7] + a.m[7] * b.m[8];
-            bruh[2] = a.m[2] * b.m[0] + a.m[5] * b.m[1] + a.m[8] * b.m[2];     bruh[5] = a.m[2] * b.m[3] + a.m[5] * b.m[4] + a.m[8] * b.m[5];     bruh[8] = a.m[2] * b.m[6] + a.m[5] * b.m[7] + a.m[8] * b.m[8];
-            
-            return bruh;
+            Matrix3 m = new Matrix3();
+            m[0] = a.m[0] * b.m[0] + a.m[3] * b.m[1] + a.m[6] * b.m[2]; m[3] = a.m[0] * b.m[3] + a.m[3] * b.m[4] + a.m[6] * b.m[5]; m[6] = a.m[0] * b.m[6] + a.m[3] * b.m[7] + a.m[6] * b.m[8];
+            m[1] = a.m[1] * b.m[0] + a.m[4] * b.m[1] + a.m[7] * b.m[2]; m[4] = a.m[1] * b.m[3] + a.m[4] * b.m[4] + a.m[7] * b.m[5]; m[7] = a.m[1] * b.m[6] + a.m[4] * b.m[7] + a.m[7] * b.m[8];
+            m[2] = a.m[2] * b.m[0] + a.m[5] * b.m[1] + a.m[8] * b.m[2]; m[5] = a.m[2] * b.m[3] + a.m[5] * b.m[4] + a.m[8] * b.m[5]; m[8] = a.m[2] * b.m[6] + a.m[5] * b.m[7] + a.m[8] * b.m[8];
+
+            return m;
         }
 
         public void SetRotateX(float fRadians)
