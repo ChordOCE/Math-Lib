@@ -6,8 +6,7 @@ namespace MathClasses
 {
     public class Colour
     {
-        private uint colour = 0;
-
+        public uint colour = 0;
         public Colour(byte red, byte green, byte blue, byte alpha)
         {
             colour = (uint)((red << 24) + (green << 16) + (blue << 8) + alpha);
@@ -16,24 +15,24 @@ namespace MathClasses
         public void SetRed(byte red)
         {
             colour &= colour & 0x00FFFFFF;
-            colour |= colour | (uint)(red << 24);
+            colour |= colour | (uint)(colour << 24);
         }
         public void SetGreen(byte green)
         {
             colour &= colour & 0x00FFFFFF;
-            colour |= colour | (uint)(green << 16);
+            colour |= colour | (uint)(colour << 16);
         }
 
         public void SetBlue(byte blue)
         {
             colour &= colour & 0x00FFFFFF;
-            colour |= colour | (uint)(blue << 8);
+            colour |= colour | (uint)(colour << 8);
         }
 
         public void SetAlpha(byte alpha)
         {
             colour &= colour & 0x00FFFFFF;
-            colour |= colour | (uint)(alpha << 0);
+            colour |= colour | (uint)(colour << 0);
         }
 
         public byte GetRed()
