@@ -38,12 +38,12 @@ namespace MathClasses
 
         public byte GetRed()
         {
-            return (byte)((colour >> 24));
+            return (byte)(colour >> 24);
         }
 
         public byte GetGreen()
         {
-            return (byte)((colour >> 16));
+            return (byte)(colour >> 16);
         }
 
         public byte GetBlue()
